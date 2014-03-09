@@ -1,0 +1,187 @@
+package test;
+
+import java.util.Random;
+
+public class k {
+	/**
+	 * @param a
+	 * @return
+	 * Calculating Sum of Single Chars
+	 */
+	public static int a(int a){int b=0;for(int x:(a+"").toCharArray()){b+=(x-'0');}return b;}
+	/**
+	 * @param a
+	 * @return
+	 * Recursively calculate Sum of the single chars down to 1 char
+	 */
+	public static int b(int a){return(a>9)?b(a(a)):a;}
+	/**
+	 * @param s
+	 * @return
+	 * Invert String
+	 */
+	public static String c(String s){for(int k=s.length()-1;k>=0;k--)s+=s.toCharArray()[k];return s.substring(s.length()/2);}
+	/**
+	 * @param a
+	 * @return
+	 * Check if even
+	 */
+	public static boolean d(int a){return (a%2)==0;}
+	/**
+	 * @param x
+	 * @param e
+	 * @return
+	 * Check if Array contains int e
+	 */
+	public static boolean e(int[] x,int e){for(Object o : x)if(o.equals(e))return true;return false;}
+	/**
+	 * @param x
+	 * @return
+	 * Find Min/Max
+	 */
+	public static int[] f(int[] x){int a,b;a=Integer.MAX_VALUE;b=Integer.MIN_VALUE;for(int k:x)if(k>b)b=k;else if(k<a)a=k;return new int[] {a,b};}
+	/**
+	 * @param x
+	 * @return
+	 * Generates a Random String with x length
+	 */
+	public static String r(int x){return r("",x);}
+	/**
+	 * @param x
+	 * @param cs
+	 * @return
+	 * Generates a Random String with x length and only chars contained in cs
+	 */
+	public static String r(int x,String cs){return r("",x,cs);}
+	private static String r(String s,int x){char[] c="abcdefghijklmnopqrstuvwxyz".toCharArray();if(x > 0)return r(c[(new Random().nextInt(26))] + s,x-1);else return s;}
+	private static String r(String s,int x,String cs){char[] c=cs.toCharArray();if(x > 0)return r(c[(new Random().nextInt(cs.length()))] + s,x-1,cs);else return s;}
+	/**
+	 * @param x
+	 * @return
+	 * Recursive Bubble Sort
+	 */
+	public static int[] x(int[] x){return x(x,0,x.length);}
+	private static int[] x(int[] a,int s,int e){if(s>e)return a;if(s==e-1)x(a,0, e-1);else if(a[s]>a[s+1]){int c=a[s];a[s]=a[s+1];a[s+1]=c;x(a,s+1,e);}else x(a,s+1,e);return a;}
+	/**
+	 * @param x
+	 * @return
+	 * Recursive Bubble Sort
+	 */
+	public static double[] x(double[] x){return x(x,0,x.length);}
+	private static double[] x(double[] a,int s,int e){if(s>e)return a;if(s==e-1)x(a,0, e-1);else if(a[s]>a[s+1]){double c=a[s];a[s]=a[s+1];a[s+1]=c;x(a,s+1,e);}else x(a,s+1,e);return a;}
+	/**
+	 * @param x
+	 * @return
+	 * Recursive Bubble Sort
+	 */
+	public static float[] x(float[] x){return x(x,0,x.length);}
+	private static float[] x(float[] a,int s,int e){if(s>e)return a;if(s==e-1)x(a,0, e-1);else if(a[s]>a[s+1]){float c=a[s];a[s]=a[s+1];a[s+1]=c;x(a,s+1,e);}else x(a,s+1,e);return a;}
+	/**
+	 * @param x
+	 * @return
+	 * Recursive Bubble Sort
+	 */
+	public static long[] x(long[] x){return x(x,0,x.length);}
+	private static long[] x(long[] a,int s,int e){if(s>e)return a;if(s==e-1)x(a,0, e-1);else if(a[s]>a[s+1]){long c=a[s];a[s]=a[s+1];a[s+1]=c;x(a,s+1,e);}else x(a,s+1,e);return a;}
+	/**
+	 * @param x
+	 * @return
+	 * Recursive Bubble Sort
+	 */
+	public static byte[] x(byte[] x){return x(x,0,x.length);}
+	private static byte[] x(byte[] a,int s,int e){if(s>e)return a;if(s==e-1)x(a,0, e-1);else if(a[s]>a[s+1]){byte c=a[s];a[s]=a[s+1];a[s+1]=c;x(a,s+1,e);}else x(a,s+1,e);return a;}	
+	/**
+	 * 
+	 * @param n
+	 * @return
+	 * Check if n is Prime
+	 */
+	public static boolean p(long n) {if(n<2) return false;if(n==2||n==3) return true;if(n%2 == 0 || n%3 == 0) return false;for(long i=6L;i<=(long)Math.sqrt(n)+1;i+=6)if(n%(i-1)==0||n%(i+1)==0) return false; return true;}
+	/**
+	 * @param n
+	 * @return
+	 * Get Primes in n Range
+	 */
+	public static int[] g(long n){int[] r=new int[1];for(int x=0;x<n;x++)if(p(x))r=i(r,x);return r;}
+	/**
+	 * @param r
+	 * @param x
+	 * @return
+	 * Insert x at the end of r
+	 */
+	public static int[] i(int[] r, int x) {int[] y = new int[r.length+1];for(int i=0;i<r.length;i++)y[i]=r[i];y[r.length]=x;return y;}
+	public static long[] i(long[] r, long x) {long[] y = new long[r.length+1];for(int i=0;i<r.length;i++)y[i]=r[i];y[r.length]=x;return y;}
+	/**
+	 * 
+	 * @param x
+	 * @param l
+	 * @param r
+	 * @return
+	 * Partition Array
+	 */
+	public static int zz(int x[], int l, int r){int i = l, j = r;int tmp;int pivot = x[(l + r) / 2];while (i <= j){while (x[i] < pivot)i++;while (x[j] > pivot)j--;if (i <= j){tmp = x[i];x[i] = x[j];x[j] = tmp;i++;j--;}}return i;}
+	/**
+	 * @param x
+	 * @param l
+	 * @param r
+	 * Quicksort
+	 */
+	public static void qs(int x[], int l, int r){int index = zz(x, l, r);if (l < index - 1)qs(x, l, index - 1);if (index < r)qs(x, index, r);}
+	/**
+	 * @param x
+	 * @return
+	 * Ascending Number Array
+	 */
+	public static int[] g(int x){int[] t=new int[x];for(int i=0;i<x;i++)t[i]=i;return t;}
+	/**
+	 * @return
+	 * abc string
+	 */
+	public static String abc(){return "abcdefghijklmnopqrstuvwxyz";}	
+	/**
+	 * @param c
+	 * @return
+	 * To Alpha-Number
+	 */
+	public static int ta(char c){return (""+c).toLowerCase().toCharArray()[0]-'a';}
+	/**
+	 * @param x
+	 * @return
+	 * To Alpha-Char
+	 */
+	public static char tx(int x){return (char) (x+'a');}
+	/**
+	 * @param x
+	 * @param k
+	 * @return
+	 * Caesar encode
+	 */
+	public static String cs(String x, int k){char[] l = x.toCharArray();for(int i = 0; i < l.length; i++){l[i] = tx((ta(x.toCharArray()[i])+k%26));}return new String(l);}
+	
+	/**
+	 * @param x
+	 * @return
+	 * Invert Case
+	 */
+	public static String li(String x){char[] l=x.toCharArray();x="";for(char c:l)if(c>='a')x+=(char)(c-32);else if(c<='Z')x+=(char)(c+32);return x;}
+	
+	/**
+	 * @param n
+	 * @return
+	 * Generate n Fibonacci Numbers
+	 */
+	public static long[] fi(int n){long[] r = new long[2];r[0]=1;for(long i = 0; i < n; i++)r=i(r,r[r.length-1]+r[r.length-2]);return sa(r,3);}
+	/**
+	 * @param x
+	 * @param b
+	 * @return
+	 * Sub-Array starting at index b
+	 */
+	public static long[] sa(long[] x, int b){long[]n = new long[x.length-b];for(int i = b; i < x.length; i++)n[i-b] = x[i];return n;}
+	/**
+	 * @return
+	 * Table of Content (!May be incomplete)
+	 */
+	public static String toc(){return "a - charsum\nb - recursive charsum\nc - invert string\nd - check if even\ne - contains\nf - find min/max\nr - random string\nx - bubble sort\np - check for prime\ng - get primes\ni - insert at the end\nqs - quicksort\ng - ascending number array\ncs - caesar encoding\nfi - get fibonacci numbers\nli - invert case";}
+	
+}
