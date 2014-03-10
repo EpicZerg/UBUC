@@ -1,4 +1,4 @@
-Ugly but useful Java Classes
+Ugly but useful Class
 ====
 ----------
 ## How to Use: ##
@@ -7,3 +7,8 @@ Ugly but useful Java Classes
 3. Start using UBUC!
 
 > Feel free to modify or copy the Methods, if you understand them ;)
+
+----------
+> For more ideas [Mail me] 
+
+[Mail Me]:mailto://kennykropp69@gmail.com
